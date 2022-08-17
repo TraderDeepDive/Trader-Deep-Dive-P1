@@ -71,11 +71,19 @@ export default function CookiePolicy() {
         <p className="mb-5">
           You can find out more about cookies (including how to see or manage
           them) at{" "}
-          <a className="text-[#2aa8ff]" href="https://allaboutcookies.org/">
+          <a
+            className="text-[#2aa8ff]"
+            href="https://allaboutcookies.org/"
+            target={"_blank"}
+          >
             All About Cookies
           </a>{" "}
           or{" "}
-          <a className="text-[#2aa8ff]" href="https://www.aboutcookies.org/">
+          <a
+            className="text-[#2aa8ff]"
+            href="https://www.aboutcookies.org/"
+            target={"_blank"}
+          >
             AboutCookies.org
           </a>{" "}
           websites.
@@ -285,6 +293,7 @@ export default function CookiePolicy() {
           <a
             className="text-[#2aa8ff]"
             href="https://policies.google.com/technologies/ads"
+            target={"_blank"}
           >
             Advertising – Privacy & Terms
           </a>{" "}
@@ -292,6 +301,7 @@ export default function CookiePolicy() {
           <a
             className="text-[#2aa8ff]"
             href="https://policies.google.com/privacy"
+            target={"_blank"}
           >
             Google’s Privacy Policy
           </a>

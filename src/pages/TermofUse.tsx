@@ -16,7 +16,11 @@ export default function TermsOfUse() {
         </h2>
         <p className="mb-5">
           Your affirmative act of using our website located at{" "}
-          <a className="text-[#2aa8ff]" href="https://www.Traderdeepdive.com">
+          <a
+            className="text-[#2aa8ff]"
+            href="https://www.Traderdeepdive.com"
+            target={"_blank"}
+          >
             www.Traderdeepdive.com
           </a>{" "}
           (and all associated sites linked to it) or services ("Traderdeepdive")
@@ -280,6 +284,7 @@ export default function TermsOfUse() {
               <a
                 className="text-[#2aa8ff]"
                 href="https://www.Traderdeepdive.com"
+                target={"_blank"}
               >
                 www.Traderdeepdive.com
               </a>{" "}
@@ -341,7 +346,11 @@ export default function TermsOfUse() {
               Our moderators are official Traderdeepdive representatives, with
               the authority to warn or ban users (including those with a paid
               subscription) when they do not abide by the{" "}
-              <a className="text-[#2aa8ff]" href="/houserules" target={"_blank"}>
+              <a
+                className="text-[#2aa8ff]"
+                href="/houserules"
+                target={"_blank"}
+              >
                 House Rules
               </a>
               . We do not offer refunds in case you are banned from publishing
@@ -406,7 +415,11 @@ export default function TermsOfUse() {
           retained for the integrity of the data on the site and our legitimate
           business purposes, including auditing, security and other legitimate
           interests (please refer to our{" "}
-          <a className="text-[#2aa8ff]" href="/privacy-policy" target={"_blank"}>
+          <a
+            className="text-[#2aa8ff]"
+            href="/privacy-policy"
+            target={"_blank"}
+          >
             Privacy Policy
           </a>{" "}
           for more information). Your published Contributions will remain on the
