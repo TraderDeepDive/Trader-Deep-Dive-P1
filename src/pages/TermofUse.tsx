@@ -341,9 +341,9 @@ export default function TermsOfUse() {
               Our moderators are official Traderdeepdive representatives, with
               the authority to warn or ban users (including those with a paid
               subscription) when they do not abide by the{" "}
-              <Link className="text-[#2aa8ff]" to="/houserules">
+              <a className="text-[#2aa8ff]" href="/houserules" target={"_blank"}>
                 House Rules
-              </Link>
+              </a>
               . We do not offer refunds in case you are banned from publishing
               content and interacting with others because your paid subscription
               and all of its data and/or features are still available during any
@@ -406,9 +406,9 @@ export default function TermsOfUse() {
           retained for the integrity of the data on the site and our legitimate
           business purposes, including auditing, security and other legitimate
           interests (please refer to our{" "}
-          <Link className="text-[#2aa8ff]" to="/privacy-policy">
+          <a className="text-[#2aa8ff]" href="/privacy-policy" target={"_blank"}>
             Privacy Policy
-          </Link>{" "}
+          </a>{" "}
           for more information). Your published Contributions will remain on the
           site in our discretion. Once a Contribution has been published, it
           becomes part of the communal trading knowledge and should stay that
@@ -446,9 +446,9 @@ export default function TermsOfUse() {
         <p className="mb-5">
           By creating and using an account on Traderdeepdive you confirm you
           have read and agree to follow our{" "}
-          <Link className="text-[#2aa8ff]" to="/houserules">
+          <a className="text-[#2aa8ff]" href="/houserules" target={"_blank"}>
             House Rules
-          </Link>
+          </a>
           .
         </p>
         <h3 className="font-bold text-lg mb-3">17. Third Party Software</h3>

@@ -1,4 +1,4 @@
-import React, {useEffect} from "react";
+import React, { useEffect } from "react";
 
 interface PropsType {
   onClick?: Function;
@@ -7,8 +7,14 @@ interface PropsType {
 export default function MBar({ onClick }: PropsType) {
   return (
     <>
-      {onClick && <div onClick={()=>{onClick&& onClick(false)}}
-       className='fixed top-0 left-0 w-screen h-screen'></div>}
+      {onClick && (
+        <div
+          onClick={() => {
+            onClick && onClick(false);
+          }}
+          className="fixed top-0 left-0 w-screen h-screen"
+        ></div>
+      )}
       <div className="justify-center flex h-[25vw] z-30">
         <a
           className="bg-[#02344a] flex grow duration-100"

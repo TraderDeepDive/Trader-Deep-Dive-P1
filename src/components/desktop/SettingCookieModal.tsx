@@ -1,16 +1,16 @@
 import { Dialog, Transition } from "@headlessui/react";
 import React, { Fragment, useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useCookies } from 'react-cookie';
+import { useCookies } from "react-cookie";
 
 type Props = {
-  opened: boolean
+  opened: boolean;
   openManageModal: Function;
 };
 
 const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
   let [isOpen, setIsOpen] = useState(true);
-  const [cookies, setCookie] = useCookies(['policy']);
+  const [cookies, setCookie] = useCookies(["policy"]);
 
   useEffect(() => {
     setIsOpen(opened);
@@ -58,7 +58,10 @@ const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
                 </button>
                 <button
                   type="button"
-                  onClick={()=> { setCookie('policy', true, { path: '/' }); closeModal();}}
+                  onClick={() => {
+                    setCookie("policy", true, { path: "/" });
+                    closeModal();
+                  }}
                   className="inline-flex justify-center rounded-md bg-none px-4 py-2 text-sm font-medium w-[100px] sm:w-[170px] bg-[#2aa8ff] text-white focus:outline-none"
                 >
                   Accept all

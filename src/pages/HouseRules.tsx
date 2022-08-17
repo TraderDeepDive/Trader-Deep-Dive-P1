@@ -167,7 +167,9 @@ export default function HouseRules() {
           use these features. Learn about them here:
           <ul className="list-disc list-inside">
             <li className="text-[#2aa8ff]">
-              <a href="https://discord.gg/RgjDpBmbFw">Discord Link</a>
+              <a href="https://discord.gg/RgjDpBmbFw" target={"_blank"}>
+                Discord Link
+              </a>
             </li>
           </ul>
           Finally, this text is not exhaustive and we reserve the right to take

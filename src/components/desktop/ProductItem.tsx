@@ -1,6 +1,6 @@
 import React, { useState, Fragment, useRef, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useCookies } from 'react-cookie';
+import { useCookies } from "react-cookie";
 
 interface propType {
   title: string;
@@ -26,15 +26,19 @@ export default function ProductItem({
 
   const ref = useRef<HTMLDivElement>(null);
   const checkedRef = useRef<HTMLInputElement>(null);
-  const [cookies, setCookie] = useCookies(['email']);
+  const [cookies, setCookie] = useCookies(["email"]);
 
-  useEffect(()=> {
-    document.addEventListener("click", (event: MouseEvent) => {
-      const { target } = event;
-      if (ref.current && target && !ref.current?.contains(target  as Node)) {
-        if(!checkedRef.current?.checked) setClicked(false)
-      }
-    }, false);
+  useEffect(() => {
+    document.addEventListener(
+      "click",
+      (event: MouseEvent) => {
+        const { target } = event;
+        if (ref.current && target && !ref.current?.contains(target as Node)) {
+          if (!checkedRef.current?.checked) setClicked(false);
+        }
+      },
+      false
+    );
   }, []);
 
   return (
@@ -52,7 +56,16 @@ export default function ProductItem({
               {clicked ? (
                 <div className="flex items-center">
                   <p className="mr-2">Compare</p>
-                  <input type="checkbox" className="w-4 h-4" onChange={(e) =>{e.stopPropagation(); setChecked(!checked);}}  checked={checked} ref={checkedRef}/>
+                  <input
+                    type="checkbox"
+                    className="w-4 h-4"
+                    onChange={(e) => {
+                      e.stopPropagation();
+                      setChecked(!checked);
+                    }}
+                    checked={checked}
+                    ref={checkedRef}
+                  />
                 </div>
               ) : (
                 <></>
@@ -74,18 +87,21 @@ export default function ProductItem({
         </div>
         <div className="flex items-center justify-around mt-5">
           <div className="-space-y-2">
-            {cookies.email ? <><p
-              className="relative text-lg text-[#496c7c] before:contents-[''] before:block
+            {cookies.email ? (
+              <>
+                <p
+                  className="relative text-lg text-[#496c7c] before:contents-[''] before:block
               before:w-16 before:h-[1px] before:bg-[#9c864f] before:absolute before:-left-2 before:bottom-3 before:-rotate-[10deg]"
-            >
-              ${price}
-            </p>
-            <p className="text-xl ml-6 text-[#fbb03b]">
-              ${price - Math.ceil((price * discount) / 100)}
-            </p></>: <p className="text-xl ml-6 text-[#fbb03b]">
-              ${price}
-            </p>
-            }
+                >
+                  ${price}
+                </p>
+                <p className="text-xl ml-6 text-[#fbb03b]">
+                  ${price - Math.ceil((price * discount) / 100)}
+                </p>
+              </>
+            ) : (
+              <p className="text-xl ml-6 text-[#fbb03b]">${price}</p>
+            )}
           </div>
           <Link
             to="/follow-up"

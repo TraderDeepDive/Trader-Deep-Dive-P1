@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { Link, Route, Router } from "react-router-dom";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
-import { useCookies } from 'react-cookie';
+import { useCookies } from "react-cookie";
 
 import json from "../content.json";
 import SwitchCookie from "./SwitchCookie";
@@ -13,14 +13,14 @@ type Props = {
 
 const ManageCookieModal: React.FC<Props> = ({ opened }) => {
   let [isOpen, setIsOpen] = useState(true);
-  const [cookies, setCookie] = useCookies(['policy']);
+  const [cookies, setCookie] = useCookies(["policy"]);
   const [cookieStatus, setCookieStatus] = useState([true, true, true]);
 
-  const setCookies = (index: number, status: boolean)=> {
-    const array = [...cookieStatus]
+  const setCookies = (index: number, status: boolean) => {
+    const array = [...cookieStatus];
     array[index] = status;
     setCookieStatus(array);
-  }
+  };
 
   function closeModal() {
     setIsOpen(false);
@@ -79,7 +79,11 @@ const ManageCookieModal: React.FC<Props> = ({ opened }) => {
                     );
                   })}
                 </div>
-                <a target={"_blank"} href="/cookie-policy" className="block my-9 text-[#02698a]">
+                <a
+                  target={"_blank"}
+                  href="/cookie-policy"
+                  className="block my-9 text-[#02698a]"
+                >
                   More information about Cookies Policy &nbsp;{" "}
                   <span>
                     <svg
@@ -99,13 +103,24 @@ const ManageCookieModal: React.FC<Props> = ({ opened }) => {
                   <button
                     type="button"
                     className="justify-center rounded-[20px] border-2 border-[#259ae9] bg-none px-4 py-2 text-sm font-medium text-[#259ae9] w-[160px] sm:w-[170px] focus:outline-none"
-                    onClick={()=> {  if(cookieStatus[0]||cookieStatus[1]||cookieStatus[2]) setCookie('policy', cookieStatus[0]||cookieStatus[1]||cookieStatus[2], { path: '/' }); closeModal();}}
+                    onClick={() => {
+                      if (cookieStatus[0] || cookieStatus[1] || cookieStatus[2])
+                        setCookie(
+                          "policy",
+                          cookieStatus[0] || cookieStatus[1] || cookieStatus[2],
+                          { path: "/" }
+                        );
+                      closeModal();
+                    }}
                   >
                     Save preferences
                   </button>
                   <button
                     type="button"
-                    onClick={()=> { setCookie('policy', true, { path: '/' }); closeModal();}}
+                    onClick={() => {
+                      setCookie("policy", true, { path: "/" });
+                      closeModal();
+                    }}
                     className="justify-center rounded-[20px] bg-none px-4 py-2 text-sm font-medium bg-[#2aa8ff] text-white focus:outline-none"
                   >
                     Accept all

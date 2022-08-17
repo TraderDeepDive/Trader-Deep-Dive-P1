@@ -20,22 +20,26 @@ export default function AboutUs() {
   const url: string = status
     ? "assets/imgs/desktop/main_bg.jpg"
     : "assets/imgs/mobile/mb_about_bg.jpg";
-  const logo:string = "assets/svg/logo.svg";
+  const logo: string = "assets/svg/logo.svg";
   const ref = useRef<HTMLDivElement>(null);
 
   function openSocial() {
     setShowSocial(true);
   }
 
-  useEffect(()=> {
-    document.title = "TraderDeepDive - About Us"
-    document.addEventListener("click", (event: MouseEvent) => {
-      const { target } = event;
-      if (ref.current && target && !ref.current?.contains(target  as Node)) {
-        setShowSocial(false);
-        setClicked(false);
-      }
-    }, false);
+  useEffect(() => {
+    document.title = "TraderDeepDive - About Us";
+    document.addEventListener(
+      "click",
+      (event: MouseEvent) => {
+        const { target } = event;
+        if (ref.current && target && !ref.current?.contains(target as Node)) {
+          setShowSocial(false);
+          setClicked(false);
+        }
+      },
+      false
+    );
   }, []);
 
   return (
@@ -52,9 +56,18 @@ export default function AboutUs() {
           </Link>
           {size.width >= 576 ? (
             <div className="flex items-center">
-              <div className="flex" onClick={() => {event?.stopPropagation(); openSocial(); setClicked(true)}}
-              onMouseOver={() => {if(!clicked) setShowSocial(true)}}
-              onMouseOut={() => setShowSocial(clicked)}>
+              <div
+                className="flex"
+                onClick={() => {
+                  event?.stopPropagation();
+                  openSocial();
+                  setClicked(true);
+                }}
+                onMouseOver={() => {
+                  if (!clicked) setShowSocial(true);
+                }}
+                onMouseOut={() => setShowSocial(clicked)}
+              >
                 {showSocial && (
                   <div className="items-center space-x-5 sm:flex" ref={ref}>
                     <a
@@ -87,9 +100,7 @@ export default function AboutUs() {
                     </a>
                   </div>
                 )}
-                <button
-                  className="rounded-3xl bg-none px-4 py-2 text-sm font-medium w-[130px] text-white outline-none"
-                >
+                <button className="rounded-3xl bg-none px-4 py-2 text-sm font-medium w-[130px] text-white outline-none">
                   FIND US
                 </button>
               </div>
@@ -120,11 +131,11 @@ export default function AboutUs() {
           <>
             <Who />
             <Link
-                to="/products"
-                className="mx-auto mb-[40px] block sm:hidden rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none hover:scale-105 hover:font-bold duration-300"
-              >
-                SUBSCRIBE
-              </Link>
+              to="/products"
+              className="mx-auto mb-[40px] block sm:hidden rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none hover:scale-105 hover:font-bold duration-300"
+            >
+              SUBSCRIBE
+            </Link>
           </>
         ) : selected == 2 ? (
           size.width >= 576 ? (
@@ -144,10 +155,10 @@ export default function AboutUs() {
           <>
             <Why />
             <Link
-                to="/products"
-                className="mx-auto mb-[40px] block sm:hidden rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none hover:scale-105 hover:font-bold duration-300"
-              >
-                SUBSCRIBE
+              to="/products"
+              className="mx-auto mb-[40px] block sm:hidden rounded-3xl px-4 text-center py-2 text-sm font-medium w-[130px] bg-[#993333] text-white focus:outline-none hover:scale-105 hover:font-bold duration-300"
+            >
+              SUBSCRIBE
             </Link>
           </>
         )}

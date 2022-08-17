@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import PolicyHeader from "../components/desktop/PolicyHeader";
 
 export default function PrivacyPolicy() {

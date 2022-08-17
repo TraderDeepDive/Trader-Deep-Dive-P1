@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import useWindowSize from "../components/common/WindowSizeHook";
 
 import PolicyHeader from "../components/desktop/PolicyHeader";

@@ -5,5 +5,5 @@ export default function PolicyHeader() {
     <div className="ml-32 py-10">
       <img className="w-20 h-20" src="assets/svg/logo.svg" />
     </div>
-  )
+  );
 }
