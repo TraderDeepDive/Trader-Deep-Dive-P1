@@ -1,7 +1,5 @@
 import React, { useState, useEffect, useRef, Fragment } from "react";
 import { Link } from "react-router-dom";
-import classnames from "classnames";
-import { Tab } from "@headlessui/react";
 import useWindowSize from "../components/common/WindowSizeHook";
 
 import Who from "../components/common/Who";
