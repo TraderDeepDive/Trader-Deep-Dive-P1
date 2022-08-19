@@ -11,7 +11,7 @@ export default function Why() {
   return (
     <div className="m-auto sm:pb-[90px]">
       {isOpened && (
-        <VideoModal url="/uploads/why.mp4" open={setIsOpened} status={false} />
+        <VideoModal url="https://firebasestorage.googleapis.com/v0/b/traderdeepdive.appspot.com/o/why.mp4?alt=media&token=86bab91e-57d9-4d20-b5bf-a37b52ce4e5e" open={setIsOpened} status={false} />
       )}
       <div className="flex h-full items-center justify-center sm:justify-evenly flex-col mx-10 gap-5 sm:gap-28 sm:flex-row">
         <div className="text-white font-sans max-w-2xl order-2 space-y-3">
