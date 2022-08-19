@@ -95,7 +95,7 @@ export default function ProductItem({
                 >
                   ${price}
                 </p>
-                <p className="text-xl ml-6 text-[#fbb03b]">
+                <p className="text-xl ml-6">
                   ${price - Math.ceil((price * discount) / 100)}
                 </p>
               </>

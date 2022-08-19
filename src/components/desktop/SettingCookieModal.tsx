@@ -35,7 +35,7 @@ const SettingCookieModal: React.FC<Props> = ({ opened, openManageModal }) => {
           >
             <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-[#02344a] p-6 text-left align-middle shadow-xl transition-all w-[90%] sm:max-w-lg md:max-w-4xl">
               <h3 className="text-lg font-medium leading-6 text-white">
-                This Websit uses Cookies
+                This Website uses Cookies
               </h3>
               <div className="mt-2">
                 <p className="text-sm text-white">
